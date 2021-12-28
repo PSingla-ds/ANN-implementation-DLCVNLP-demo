@@ -35,7 +35,7 @@ def save_model(model, model_name, model_dir):
 def save_plot(loss_acc, plot_name, plots_dir):
     pd.DataFrame(loss_acc).plot(figsize=(8,5))
     plt.grid(True)
-    plt.gca().set_ylim(0,1)
+    plt.gca().set_ylim(-0.2,0.5)
 
     unique_filename = get_unique_filename(plot_name)
     path_to_plot = os.path.join(plots_dir, unique_filename)
